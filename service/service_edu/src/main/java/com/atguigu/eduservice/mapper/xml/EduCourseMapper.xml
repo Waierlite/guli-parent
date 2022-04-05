@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.atguigu.eduservice.mapper.EduCourseMapper">
+
+    <!--自定义多表查询sql-->
+    <select id="getCoursePublishForm" resultType="com.atguigu.eduservice.entity.vo.CoursePublishForm">
+        SELECT
+            a.id,
+            a.title,
+            a.price,
+            a.lesson_num,
+            a.cover,
+            d.title as subjectLevelOne,
+            e.title as subjectLevelTwo,
+            c.name as teacherName
+        FROM
+            `edu_course` a
+            LEFT JOIN edu_course_description b ON a.id = b.id
+            LEFT JOIN edu_teacher c ON a.teacher_id = c.id
+            LEFT JOIN edu_subject d ON a.subject_parent_id = d.id
+            LEFT JOIN edu_subject e ON a.subject_id = e.id
+        WHERE
+            a.id = #{courseId}
+    </select>
+
+    <!-- 自定义递归删除课程相关信息 -->
+    <delete id="deleteCourse">
+        DELETE
+            edu_video,
+            edu_chapter,
+            edu_course_description,
+            edu_course
+        FROM
+            edu_course
+        LEFT JOIN edu_course_description ON edu_course.id = edu_course_description.id
+        LEFT JOIN edu_chapter ON edu_course.id = edu_chapter.course_id
+        LEFT JOIN edu_video ON edu_course.id = edu_video.course_id
+        WHERE
+            edu_course.id = #{courseId};
+    </delete>
+
+    <select id="getCourseFrontInfo" resultType="com.atguigu.eduservice.entity.vo.CourseFrontInfo">
+        SELECT
+            a.id,
+            a.title,
+            a.price,
+            a.lesson_num,
+            a.cover,
+            a.buy_count,
+            a.view_count,
+            b.description,
+            c.id as teacherId,
+            c.name as teacherName,
+            c.intro,
+            c.avatar,
+            d.id as subjectLevelOneId,
+            d.title as subjectLevelOne,
+            e.id as subjectLevelTwoId,
+            e.title as subjectLevelTwo
+        FROM
+            `edu_course` a
+            LEFT JOIN edu_course_description b ON a.id = b.id
+            LEFT JOIN edu_teacher c ON a.teacher_id = c.id
+            LEFT JOIN edu_subject d ON a.subject_parent_id = d.id
+            LEFT JOIN edu_subject e ON a.subject_id = e.id
+        WHERE
+            a.id = #{courseId}
+    </select>
+</mapper>

@@ -1,0 +1,10 @@
+2022-03-15 15:02:15.608 [http-nio-8001-exec-9] ERROR c.a.servicebase.handler.GlobalExceptionHandler -
+                null
+2022-03-15 15:02:54.948 [http-nio-8001-exec-4] ERROR c.a.servicebase.handler.GlobalExceptionHandler -
+                Source must not be null
+2022-03-15 15:06:11.837 [http-nio-8001-exec-1] ERROR c.a.servicebase.handler.GlobalExceptionHandler -
+                Source must not be null
+2022-03-15 15:23:12.393 [http-nio-8001-exec-4] ERROR c.a.servicebase.handler.GlobalExceptionHandler -
+                null
+2022-03-15 15:36:02.980 [http-nio-8001-exec-1] ERROR c.a.servicebase.handler.GlobalExceptionHandler -
+                Source must not be null

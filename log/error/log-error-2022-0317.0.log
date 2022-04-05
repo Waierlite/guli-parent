@@ -1,0 +1,8 @@
+2022-03-17 21:48:22.971 [http-nio-8001-exec-1] ERROR c.a.servicebase.handler.GlobalExceptionHandler -
+                
+### Error updating database.  Cause: java.sql.SQLException: Field 'title' doesn't have a default value
+### The error may involve com.atguigu.eduservice.mapper.EduVideoMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO edu_video  ( id, course_id, chapter_id,           gmt_create, gmt_modified )  VALUES  ( ?, ?, ?,           ?, ? )
+### Cause: java.sql.SQLException: Field 'title' doesn't have a default value
+; Field 'title' doesn't have a default value; nested exception is java.sql.SQLException: Field 'title' doesn't have a default value

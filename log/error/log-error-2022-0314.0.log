@@ -1,0 +1,64 @@
+2022-03-14 10:41:43.195 [http-nio-8001-exec-8] ERROR c.a.servicebase.handler.GlobalExceptionHandler -
+                
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '14' for key 'PRIMARY'
+### The error may involve com.atguigu.eduservice.mapper.EduCourseMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO edu_course  ( id, teacher_id, subject_id, subject_parent_id, title, price, lesson_num, cover,      gmt_create, gmt_modified )  VALUES  ( ?, ?, ?, ?, ?, ?, ?, ?,      ?, ? )
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '14' for key 'PRIMARY'
+; Duplicate entry '14' for key 'PRIMARY'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '14' for key 'PRIMARY'
+2022-03-14 10:42:02.835 [http-nio-8001-exec-7] ERROR c.a.servicebase.handler.GlobalExceptionHandler -
+                
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '14' for key 'PRIMARY'
+### The error may involve com.atguigu.eduservice.mapper.EduCourseMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO edu_course  ( id, teacher_id, subject_id, subject_parent_id, title, price, lesson_num, cover,      gmt_create, gmt_modified )  VALUES  ( ?, ?, ?, ?, ?, ?, ?, ?,      ?, ? )
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '14' for key 'PRIMARY'
+; Duplicate entry '14' for key 'PRIMARY'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '14' for key 'PRIMARY'
+2022-03-14 11:43:54.315 [http-nio-8001-exec-9] ERROR c.a.servicebase.handler.GlobalExceptionHandler -
+                Source must not be null
+2022-03-14 11:45:12.955 [http-nio-8001-exec-2] ERROR c.a.servicebase.handler.GlobalExceptionHandler -
+                Source must not be null
+2022-03-14 11:48:42.709 [http-nio-8001-exec-4] ERROR c.a.servicebase.handler.GlobalExceptionHandler -
+                Source must not be null
+2022-03-14 12:49:03.558 [http-nio-8001-exec-2] ERROR c.a.servicebase.handler.GlobalExceptionHandler -
+                Source must not be null
+2022-03-14 14:34:42.898 [http-nio-8001-exec-1] ERROR c.a.servicebase.handler.GlobalExceptionHandler -
+                Source must not be null
+2022-03-14 14:38:52.826 [http-nio-8001-exec-6] ERROR c.a.servicebase.handler.GlobalExceptionHandler -
+                Source must not be null
+2022-03-14 14:39:24.677 [http-nio-8001-exec-1] ERROR c.a.servicebase.handler.GlobalExceptionHandler -
+                Source must not be null
+2022-03-14 14:40:09.284 [http-nio-8001-exec-5] ERROR c.a.servicebase.handler.GlobalExceptionHandler -
+                Source must not be null
+2022-03-14 14:46:06.808 [http-nio-8001-exec-9] ERROR c.a.servicebase.handler.GlobalExceptionHandler -
+                Source must not be null
+2022-03-14 14:47:19.826 [http-nio-8001-exec-10] ERROR c.a.servicebase.handler.GlobalExceptionHandler -
+                Source must not be null
+2022-03-14 14:50:28.042 [http-nio-8001-exec-7] ERROR c.a.servicebase.handler.GlobalExceptionHandler -
+                Source must not be null
+2022-03-14 14:56:03.165 [http-nio-8001-exec-8] ERROR c.a.servicebase.handler.GlobalExceptionHandler -
+                Source must not be null
+2022-03-14 14:59:54.951 [http-nio-8001-exec-5] ERROR c.a.servicebase.handler.GlobalExceptionHandler -
+                Source must not be null
+2022-03-14 17:07:02.380 [http-nio-8001-exec-4] ERROR c.a.servicebase.handler.GlobalExceptionHandler -
+                
+### Error updating database.  Cause: java.sql.SQLException: Field 'course_id' doesn't have a default value
+### The error may involve com.atguigu.eduservice.mapper.EduChapterMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO edu_chapter  ( id,  title, sort )  VALUES  ( ?,  ?, ? )
+### Cause: java.sql.SQLException: Field 'course_id' doesn't have a default value
+; Field 'course_id' doesn't have a default value; nested exception is java.sql.SQLException: Field 'course_id' doesn't have a default value
+2022-03-14 17:09:11.939 [http-nio-8001-exec-8] ERROR c.a.servicebase.handler.GlobalExceptionHandler -
+                
+### Error updating database.  Cause: java.sql.SQLException: Field 'gmt_create' doesn't have a default value
+### The error may involve com.atguigu.eduservice.mapper.EduChapterMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO edu_chapter  ( id, course_id, title, sort )  VALUES  ( ?, ?, ?, ? )
+### Cause: java.sql.SQLException: Field 'gmt_create' doesn't have a default value
+; Field 'gmt_create' doesn't have a default value; nested exception is java.sql.SQLException: Field 'gmt_create' doesn't have a default value
+2022-03-14 21:05:25.954 [http-nio-8001-exec-3] ERROR c.a.servicebase.handler.GlobalExceptionHandler -
+                Required request body is missing: public com.atguigu.commonutils.ResultJson com.atguigu.eduservice.controller.EduVideoController.addVideo(com.atguigu.eduservice.entity.EduVideo)
+2022-03-14 22:23:38.291 [http-nio-8001-exec-6] ERROR c.a.servicebase.handler.GlobalExceptionHandler -
+                Invalid bound statement (not found): com.atguigu.eduservice.mapper.EduCourseMapper.getCoursePublishForm
+2022-03-14 22:35:24.245 [http-nio-8001-exec-1] ERROR c.a.servicebase.handler.GlobalExceptionHandler -
+                Invalid bound statement (not found): com.atguigu.eduservice.mapper.EduCourseMapper.getCoursePublishForm
