@@ -3,7 +3,7 @@ package com.atguigu.aclservice.service.impl;
 import com.atguigu.aclservice.entity.User;
 import com.atguigu.aclservice.service.PermissionService;
 import com.atguigu.aclservice.service.UserService;
-import com.atguigu.serurity.entity.SecurityUser;
+import com.atguigu.security.entity.SecurityUser;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -46,7 +46,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
             //throw new UsernameNotFoundException("用户名不存在！");
         }
         // 返回UserDetails实现类
-        com.atguigu.serurity.entity.User curUser = new com.atguigu.serurity.entity.User();
+        com.atguigu.security.entity.User curUser = new com.atguigu.security.entity.User();
         BeanUtils.copyProperties(user,curUser);
 
         List<String> authorities = permissionService.selectPermissionValueByUserId(user.getId());

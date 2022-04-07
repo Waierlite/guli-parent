@@ -1,6 +1,6 @@
 package com.atguigu.security.security;
 
-import com.atguigu.commonutils.MD5;
+import com.atguigu.commonutils.MD5Util;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
@@ -28,10 +28,10 @@ public class DefaultPasswordEncoder implements PasswordEncoder {
     }
 
     public String encode(CharSequence rawPassword) {
-        return MD5.encrypt(rawPassword.toString());
+        return MD5Util.getMD5(rawPassword.toString());
     }
 
     public boolean matches(CharSequence rawPassword, String encodedPassword) {
-        return encodedPassword.equals(MD5.encrypt(rawPassword.toString()));
+        return encodedPassword.equals(MD5Util.getMD5(rawPassword.toString()));
     }
 }

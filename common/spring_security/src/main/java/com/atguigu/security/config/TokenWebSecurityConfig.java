@@ -1,11 +1,11 @@
 package com.atguigu.security.config;
 
-import com.atguigu.serurity.filter.TokenAuthenticationFilter;
-import com.atguigu.serurity.filter.TokenLoginFilter;
-import com.atguigu.serurity.security.DefaultPasswordEncoder;
-import com.atguigu.serurity.security.TokenLogoutHandler;
-import com.atguigu.serurity.security.TokenManager;
-import com.atguigu.serurity.security.UnauthorizedEntryPoint;
+import com.atguigu.security.filter.TokenAuthenticationFilter;
+import com.atguigu.security.filter.TokenLoginFilter;
+import com.atguigu.security.security.DefaultPasswordEncoder;
+import com.atguigu.security.security.TokenLogoutHandler;
+import com.atguigu.security.security.TokenManager;
+import com.atguigu.security.security.UnauthorizedEntryPoint;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.core.RedisTemplate;

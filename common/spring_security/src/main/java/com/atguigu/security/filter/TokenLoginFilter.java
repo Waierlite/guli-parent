@@ -1,10 +1,10 @@
 package com.atguigu.security.filter;
 
-import com.atguigu.commonutils.R;
 import com.atguigu.commonutils.ResponseUtil;
-import com.atguigu.serurity.entity.SecurityUser;
-import com.atguigu.serurity.entity.User;
-import com.atguigu.serurity.security.TokenManager;
+import com.atguigu.commonutils.ResultJson;
+import com.atguigu.security.entity.SecurityUser;
+import com.atguigu.security.entity.User;
+import com.atguigu.security.security.TokenManager;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -72,7 +72,7 @@ public class TokenLoginFilter extends UsernamePasswordAuthenticationFilter {
         String token = tokenManager.createToken(user.getCurrentUserInfo().getUsername());
         redisTemplate.opsForValue().set(user.getCurrentUserInfo().getUsername(), user.getPermissionValueList());
 
-        ResponseUtil.out(res, R.ok().data("token", token));
+        ResponseUtil.out(res, ResultJson.ok().data("token", token));
     }
 
     /**
@@ -86,6 +86,6 @@ public class TokenLoginFilter extends UsernamePasswordAuthenticationFilter {
     @Override
     protected void unsuccessfulAuthentication(HttpServletRequest request, HttpServletResponse response,
                                               AuthenticationException e) throws IOException, ServletException {
-        ResponseUtil.out(response, R.error());
+        ResponseUtil.out(response, ResultJson.error());
     }
 }

@@ -1,7 +1,7 @@
 package com.atguigu.security.security;
 
-import com.atguigu.commonutils.R;
 import com.atguigu.commonutils.ResponseUtil;
+import com.atguigu.commonutils.ResultJson;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
 
@@ -24,6 +24,6 @@ public class UnauthorizedEntryPoint implements AuthenticationEntryPoint {
     public void commence(HttpServletRequest request, HttpServletResponse response,
                          AuthenticationException authException) throws IOException, ServletException {
 
-        ResponseUtil.out(response, R.error());
+        ResponseUtil.out(response, ResultJson.error());
     }
 }

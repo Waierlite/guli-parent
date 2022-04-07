@@ -1,8 +1,8 @@
 package com.atguigu.security.filter;
 
-import com.atguigu.commonutils.R;
 import com.atguigu.commonutils.ResponseUtil;
-import com.atguigu.serurity.security.TokenManager;
+import com.atguigu.commonutils.ResultJson;
+import com.atguigu.security.security.TokenManager;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -52,13 +52,13 @@ public class TokenAuthenticationFilter extends BasicAuthenticationFilter {
         try {
             authentication = getAuthentication(req);
         } catch (Exception e) {
-            ResponseUtil.out(res, R.error());
+            ResponseUtil.out(res, ResultJson.error());
         }
 
         if (authentication != null) {
             SecurityContextHolder.getContext().setAuthentication(authentication);
         } else {
-            ResponseUtil.out(res, R.error());
+            ResponseUtil.out(res, ResultJson.error());
         }
         chain.doFilter(req, res);
     }

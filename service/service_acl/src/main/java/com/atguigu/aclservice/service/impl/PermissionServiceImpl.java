@@ -173,10 +173,15 @@ public class PermissionServiceImpl extends ServiceImpl<PermissionMapper, Permiss
      * @return
      */
     private static List<Permission> bulid(List<Permission> treeNodes) {
+        // 创建list集合，用于数据最终封装
         List<Permission> trees = new ArrayList<>();
+        // 使用增强for循环遍历所有元素
         for (Permission treeNode : treeNodes) {
+            // 获得 pid=0 的顶层节点（递归入口）
             if ("0".equals(treeNode.getPid())) {
+                // 设置level值为1
                 treeNode.setLevel(1);
+                // 继续递归查询子节点
                 trees.add(findChildren(treeNode,treeNodes));
             }
         }
@@ -189,12 +194,16 @@ public class PermissionServiceImpl extends ServiceImpl<PermissionMapper, Permiss
      * @return
      */
     private static Permission findChildren(Permission treeNode,List<Permission> treeNodes) {
+        // 创建list集合设置为children
         treeNode.setChildren(new ArrayList<Permission>());
-
+        // 继续遍历所有元素
         for (Permission it : treeNodes) {
+            // 获取该节点的子节点
             if(treeNode.getId().equals(it.getPid())) {
+                // 子节点比父节点level+1
                 int level = treeNode.getLevel() + 1;
                 it.setLevel(level);
+                // 如果children字段为空，则为末节点（递归出口）
                 if (treeNode.getChildren() == null) {
                     treeNode.setChildren(new ArrayList<>());
                 }

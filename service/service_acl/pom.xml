@@ -12,6 +12,7 @@
     <artifactId>service_acl</artifactId>
 
     <dependencies>
+        <!-- 引入自定义权限管理整合包 -->
         <dependency>
             <groupId>com.atguigu</groupId>
             <artifactId>spring_security</artifactId>

@@ -55,8 +55,6 @@ public class PermissionController {
         return ResultJson.ok().data("children", list);
     }
 
-
-
     @ApiOperation(value = "新增菜单")
     @PostMapping("save")
     public ResultJson save(@RequestBody Permission permission) {
