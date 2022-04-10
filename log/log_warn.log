@@ -1,8 +1,8 @@
-2022-04-02 14:56:28.438 [main] WARN  com.netflix.config.sources.URLConfigurationSource -
+2022-04-09 00:01:00.850 [main] WARN  com.netflix.config.sources.URLConfigurationSource -
                 No URLs will be polled as dynamic configuration sources.
-2022-04-02 14:56:28.445 [main] WARN  com.netflix.config.sources.URLConfigurationSource -
+2022-04-09 00:01:00.858 [main] WARN  com.netflix.config.sources.URLConfigurationSource -
                 No URLs will be polled as dynamic configuration sources.
-2022-04-02 15:30:37.631 [main] WARN  com.netflix.config.sources.URLConfigurationSource -
+2022-04-09 19:49:58.905 [main] WARN  com.netflix.config.sources.URLConfigurationSource -
                 No URLs will be polled as dynamic configuration sources.
-2022-04-02 15:30:37.635 [main] WARN  com.netflix.config.sources.URLConfigurationSource -
+2022-04-09 19:49:58.909 [main] WARN  com.netflix.config.sources.URLConfigurationSource -
                 No URLs will be polled as dynamic configuration sources.
